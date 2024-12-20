@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{margin:0;
+padding: 0;
+}
+
+:root{
+--color-1:#f4f8fb;
+--color-2:#b0c4de;
+--color-3:#4682b4;
+--color-4:#5a9bd3;
+--color-5:#eaf0f6;
+--color-6:#333;
+--color-7:#FFFFFF;
+--color-8:#f0f8ff;
+--color-9:#000000;
+--color-10:#555;
+--color-11:#25D366;
+--color-12:#4CAF50;
+--color-13:#45a049 ; 
+--color-14:#666;
+--color-15:#ddd;
+--font-family-1: 'Playfair Display', serif;
+}
+
+body {
+font-family: var(--font-family-1);
+background-color:var(--color-1);
+color:var(--color-6);
+}
+
+header {
+    background-color: #b0c4de;
+    background-position: center;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.header_menu_nav{
+    font-size: 2 rem;
+    color: var(--color-6);
+    text-decoration:none;
+    cursor: pointer;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    gap:20px;
+}
+
+.btn {
+    background-color: var(--color-3);
+    color: var(--color-7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--color-3);
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+.profile-photo {
+    width: 150px;
+    border: radius 8px;;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 2px solid var(--color-8);
+    border-radius: 8px;
+    gap: 20px;
+    justify-items: center;
+}
+
+.video-gallery .video-item {
+    width: 100%;
+    max-width: 300px; /* Ajuste este valor conforme necessário */
+}
+
+.video-gallery .video-item video {
+    width: 100%;
+    height: auto;
+}
+
+.informations{
+    display: flex;
+    justify-content:center;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    color: var(--color-6);
+    gap:2%;
+    padding: auto;
+}
+
+.informations_icon{
+  font-size: 1rem;
+}
+
+.informations_icon_img{
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.btn.whatsapp {
+    background-color:var(--color-13); 
+    color:var(--color-7);
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 15px 45px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn.whatsapp:hover {
+    background-color:var(--color-11); 
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-2);
+    color: var(--color-7);
+    position: relative;
+}
+

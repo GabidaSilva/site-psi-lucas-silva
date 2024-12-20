@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato Psicólogo Lucas Silva</title>
+    <link rel="stylesheet" href="styles/contact.css">
+    <script defer src="javascripts/contact.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="header_menu">
+            <ul>
+                <li><a href="index.html" class="header_menu_nav">Home</a></li>
+                <li><a href="about.html" class="header_menu_nav">Sobre</a></li>
+                <li><a href="services.html" class="header_menu_nav">Serviços</a></li>
+                <li><a href="face_to_face_services.html" class="header_menu_nav">Atendimento Presencial</a></li>
+                <li><a href="online_services.html" class="header_menu_nav">Atendimento Online</a></li>
+                <li><a href="pills.html" class="header_menu_nav">Pílulas</a></li>
+                <li><a href="contact.html" class="header_menu_nav">Contato</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="form-section">
+                <h2>Entre em contato</h2>
+                <!-- Formulário -->
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required tabindex="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required tabindex="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(XX) XXXXX-XXXX" required tabindex="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" required tabindex="0"></textarea>
+                    </div>
+                    <button type="submit" tabindex="0">Enviar</button>
+                </form>
+
+                <!-- Contêiner para mensagem de sucesso -->
+                <div id="successMessage" class="hidden"></div>
+            </div>
+
+            <!-- Imagem -->
+            <div class="image-section">
+                <img src="assets/img1.jpeg" alt="Psicólogo">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gabriela da Silva</p>
+    </footer>
+</body>
+</html>

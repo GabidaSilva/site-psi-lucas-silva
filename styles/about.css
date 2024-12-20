@@ -1,18 +1,53 @@
-/* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*{
+    margin:0;
     padding: 0;
-    background-color: #f4f8fb;
-    color: #333;
+}
+:root{
+    --color-1:#f4f8fb;
+    --color-2:#b0c4de;
+    --color-3:#4682b4;
+    --color-4:#5a9bd3;
+    --color-5:#eaf0f6;
+    --color-6:#333;
+    --color-7:#FFFFFF;
+    --color-8:#f0f8ff;
+    --color-9:#000000;
+    --color-10:#555;
+    --color-11:#d4edda;
+    --color-12:#c3e6cb;
+    --color-13:#155724 ; 
+    --color-14:#666;
+    --color-15:#ddd;
+    --font-family-1: 'Playfair Display', serif;
+
+}
+body {
+    font-family: var(--font-family-1);
+    background-color:var(--color-1);
+    color:var(--color-6);
 }
 
 header {
-    text-align: center;
     background-color: #b0c4de;
+    background-position: center;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
 }
-
+.header_menu_nav{
+    font-size: 2 rem;
+    color: var(--color-6);
+    text-decoration:none;
+    cursor: pointer;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    gap:20px;
+}
 .btn {
     background-color: #4682b4;
     color: white;
@@ -26,7 +61,6 @@ header {
     background-color: #5a9bd3;
 }
 
-/* Estilos para Seções */
 section {
     padding: 20px;
     margin: 20px;
@@ -44,7 +78,7 @@ section {
 
 .profile-photo {
     width: 150px;
-    border-radius: 50%;
+    border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
