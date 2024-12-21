@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Seleciona a seção onde os cards dos servicos serão exibidos
     const servicesSection = document.getElementById("services-section");
 
-    // Lista de servicos com suas imagens, títulos e descrições
     const servicesData = [
         {
             img: "assets/img1.jpeg",
@@ -22,20 +20,17 @@ document.addEventListener("DOMContentLoaded", function() {
         
     ];
 
-    // Para cada servico na lista, cria um card e adiciona à seção
     servicesData.forEach(services=> {
-        // Cria um elemento de artigo para o card de serv ico
+        
         const card = document.createElement("article");
         card.className = "card";
         
-        // Adiciona o conteúdo HTML ao card
         card.innerHTML = `
             <img src="${services.img}" alt="Imagem de ${services.title}">
             <h3 class="card-title">${services.title}</h3>
             <p>${services.description}</p>
         `;
         
-        // Adiciona o card à seção de servicos na página
         servicesSection.appendChild(card);
     });
 });

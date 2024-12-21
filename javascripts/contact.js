@@ -1,4 +1,3 @@
-// Função para validar o telefone
 function validaTelefone(telefone) {
     const numero = telefone.replace(/\D/g, '');
 
@@ -20,7 +19,6 @@ function validaTelefone(telefone) {
     return textoFormatado;
 }
 
-// Função para enviar o formulário
 function enviarFormulario(form) {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -33,17 +31,13 @@ function enviarFormulario(form) {
         return;
     }
 
-    // Exibir mensagem de sucesso
     const successMessage = document.getElementById('successMessage');
-    
-    // Preencher a mensagem com o nome do usuário
+
     successMessage.innerHTML = `Obrigado por entrar em contato, ${name}!` + `<br>` + ` Retornarei seu contato em breve.`;
     
-    // Ocultar o formulário e mostrar a mensagem
     form.classList.add('hidden');
     successMessage.classList.remove('hidden');
 
-    // Recarregar o formulário após 2 segundos
     setTimeout(() => {
         form.reset();
         successMessage.classList.add('hidden');
@@ -51,11 +45,9 @@ function enviarFormulario(form) {
     }, 2000);
 }
 
-// Configuração dos eventos quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
     
-    // Aplicar validação ao campo de telefone
     document.getElementById('phone').addEventListener('input', function () {
         const resultado = validaTelefone(this.value);
         if (resultado) {
@@ -66,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Manipulador de envio do formulário
+
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         enviarFormulario(this);

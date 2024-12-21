@@ -14,9 +14,9 @@
     --color-8:#f0f8ff;
     --color-9:#000000;
     --color-10:#555;
-    --color-11:#d4edda;
-    --color-12:#c3e6cb;
-    --color-13:#155724 ; 
+    --color-11:#25D366;
+    --color-12:#4CAF50;
+    --color-13:#45a049; 
     --color-14:#666;
     --color-15:#ddd;
     --font-family-1: 'Playfair Display', serif;
@@ -29,19 +29,28 @@ body {
 }
 
 header {
-    background-color: #b0c4de;
+    background-color:var(--color-2);
     background-position: center;
     height: 100px;
     display: flex;
-    justify-content: space-between;
+    font-size: 1.5rem;
+    justify-content:space-around;
     align-items: center;
     padding: 20px;
 }
+
 .header_menu_nav{
     font-size: 2 rem;
     color: var(--color-6);
     text-decoration:none;
     cursor: pointer;
+ 
+}
+.header_menu_nav:hover{
+    color: var(--color-14);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
+    
 }
 ul{
     display: flex;
@@ -107,6 +116,13 @@ input, textarea, button {
     height: auto;
     border-radius: 8px;
 }
+.form-section, .image-section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-section:hover, .image-section:hover {
+    transform: scale(1.05);
+}
 
 h2 {
     color:var(--color-6);
@@ -155,8 +171,8 @@ button:hover {
 }
 
 button:focus {
-    background-color: var(--color-4); /* Alterar cor ao receber foco */
-    outline: 3px solid var(--color-4); /* Destacar com borda visível */
+    background-color: var(--color-4); 
+    outline: 3px solid var(--color-4); 
     outline-offset: 2px;
 }
 
@@ -169,19 +185,53 @@ button:focus {
     height: 60%;
     margin-top: 50px;
     padding: 15px;
-    background-color:var(--color-11); /* Cor de fundo verde claro */
-    color:var(--color-13); /* Cor do texto verde escuro */
-    border: 1px solid var(--color-12); /* Borda verde clara */
-    border-radius: 8px; /* Bordas arredondadas */
-    font-size: 16px; /* Tamanho da fonte */
-    text-align: center; /* Centralizar o texto */
-    line-height: 2.5; /* Espaçamento entre linhas */
+    background-color:var(--color-2);
+    color:var(--color-6); 
+    border: 2px solid var(--color-3); 
+    border-radius: 8px; 
+    font-size: 1.5rem;
+    text-align: center; 
+    line-height: 2.5; 
+}
+
+.btn.whatsapp {
+    background-color:var(--color-13); 
+    color:var(--color-7);
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 15px 45px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn.whatsapp:hover {
+    background-color:var(--color-11); 
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-links a:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
+}
+
+.social-links-img {
+    width: 30px;
+    height: 30px;
 }
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background-color: var(--color-2);
-    color: var(--color-7);
-    position: relative;
+    color: var(--color-6);
 }
